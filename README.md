@@ -51,8 +51,8 @@ TraceX AI lets you ingest any local or GitHub repository and ask natural languag
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/repopilot.git
-cd repopilot
+git clone https://github.com/your-username/TraceX.git
+cd TraceX
 ```
 
 ### 2. Backend Setup
@@ -231,7 +231,7 @@ git clone https://github.com/YOUR-USERNAME/repopilot.git
 cd repopilot
 
 # 3. Add upstream remote
-git remote add upstream https://github.com/original-username/repopilot.git
+git remote add upstream https://github.com/original-username/TraceX.git
 ```
 
 ### Create a Branch
