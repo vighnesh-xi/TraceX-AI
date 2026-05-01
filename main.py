@@ -9,12 +9,12 @@ setup_logging()
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    logger.info("RepoPilot starting up...")
+    logger.info("TraceX starting up...")
     yield
-    logger.info("RepoPilot shutting down.")
+    logger.info("TraceX shutting down.")
 
 app = FastAPI(
-    title="RepoPilot",
+    title="TraceX",
     description="AI-powered codebase understanding assistant",
     version="1.0.0",
     lifespan=lifespan,
