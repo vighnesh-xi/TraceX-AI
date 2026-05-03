@@ -2,7 +2,7 @@
 
 > An AI-powered codebase understanding assistant built with FastAPI, React, and Hybrid RAG.
 
-TraceX AI lets you ingest any local or GitHub repository and ask natural language questions about it — architecture, data flow, function locations, and impact analysis — powered by AST-aware chunking, hybrid retrieval (FAISS + BM25), dependency graph traversal, and Grok AI generation.
+TraceX AI lets you ingest any local or GitHub repository and ask natural language questions about it — architecture, data flow, function locations, and impact analysis — powered by AST-aware chunking, hybrid retrieval (FAISS + BM25), dependency graph traversal, and Groq AI generation.
 
 ---
 
@@ -27,13 +27,9 @@ TraceX AI lets you ingest any local or GitHub repository and ask natural languag
 | Embeddings | Sentence Transformers |
 | Vector Store | FAISS |
 | Keyword Search | BM25 (rank-bm25) |
-| LLM | Grok AI (xAI API) |
+| LLM | Groq AI (xAI API) |
 | Parsing | Python AST, Tree-sitter |
 | Logging | Loguru |
-
----
-
-
 
 ---
 
@@ -42,7 +38,7 @@ TraceX AI lets you ingest any local or GitHub repository and ask natural languag
 - Python 3.10+
 - Node.js 18+
 - Git (required for GitHub URL ingestion)
-- Grok AI API key from [console.x.ai](https://console.x.ai)
+- Groq AI API key from [console.groq.com](https://console.groq.com)
 
 ---
 
@@ -92,19 +88,20 @@ GROQ_API_KEY=your_actual_key_here
 > **Get your Groq API key:** Sign up at [console.groq.com](https://console.groq.com) → API Keys → Create new key. It is free to use.
 >
 > **Never commit `.env` to Git.** It is listed in `.gitignore` and will not be pushed. Only `.env.example` (with no real values) is committed as a reference for other developers.
+
 ### 4. Start the Backend
 
 ```bash
 python main.py
 ```
 
-The API will be available at `http://localhost:8000`.
+The API will be available at `http://localhost:8000`.  
 API docs available at `http://localhost:8000/docs`.
 
 ### 5. Frontend Setup
 
 ```bash
-cd codelens-frontend
+cd tracex-frontend
 npm install
 npm run dev
 ```
@@ -211,6 +208,7 @@ rank-bm25
 python-dotenv
 gitpython
 requests
+groq
 ```
 
 > Install all with: `pip install -r requirements.txt`
@@ -227,8 +225,8 @@ Contributions are welcome! Here's how to get started:
 # 1. Fork the repo on GitHub (click Fork top-right)
 
 # 2. Clone your fork
-git clone https://github.com/YOUR-USERNAME/repopilot.git
-cd repopilot
+git clone https://github.com/YOUR-USERNAME/TraceX.git
+cd TraceX
 
 # 3. Add upstream remote
 git remote add upstream https://github.com/original-username/TraceX.git
